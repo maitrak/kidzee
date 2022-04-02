@@ -1,0 +1,58 @@
+<html>
+<body>
+<?php
+session_start();
+?>
+
+
+
+
+
+
+
+ <table border="1">
+
+  <tr>
+  <td>child's photo</td>
+  <td>father's photo</td>
+  <td>mother's photo</td>
+    <tr>
+  <td>
+  <form  method="post" action="child_photo.php" enctype="multipart/form-data">
+  <input type="file"  name="fileupload" style="height:60px;"accept="image/*"/><br>
+  <input type="submit" name="submit" value="submit">
+  </form>
+  
+  </td>
+  <td>
+  <form  method="post" action="father_photo.php" enctype="multipart/form-data">
+  <input type="file"  name="Father_photo" style="height:60px;"accept="image/*"/><br>
+  <input type="submit" name="submit" value="submit">
+  </form>
+  
+  </td>
+  <td>
+  <form  method="post" action="mother_photo.php" enctype="multipart/form-data">
+  <input type="file"  name="Mother_photo" style="height:60px;"accept="image/*"/><br>
+  <input type="submit" name="submit" value="submit">
+  </form>
+  
+  </td>
+  </tr>
+  </tr>
+  </table>
+
+<?php
+echo $_SESSION['username'];
+echo $_SESSION["favanimal"];
+    
+?>
+
+
+
+
+
+
+
+</body>
+</html>
