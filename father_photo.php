@@ -16,7 +16,7 @@ session_start();
 		if(isset($_POST['submit']))
 		{
 			
-			$file_dir = "D:\wamp64\www\kidzee\image";
+			$file_dir = "../kidzee/image";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";

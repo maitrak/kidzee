@@ -88,7 +88,7 @@ include('nav.php');
 		$Aproval_Date=$_POST['Aproval_Date'];
 		$Remarks=$_POST['Remarks'];
 		
-		$file_dir = "D:\wamp64\www\kidzee\Payment";
+		$file_dir = "../kidzee/Payment";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";

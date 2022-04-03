@@ -178,7 +178,7 @@ Remarks<input type="text" name="Remarks"  ><br>
     $Salary=$_POST['Salary'];
     $Remarks=$_POST['Remarks'];
 	
-			$file_dir = "D:\wamp64\www\kidzee\Teacher";
+			$file_dir = "../kidzee/Teacher";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";

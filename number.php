@@ -103,7 +103,7 @@ include('nav.php');
         echo $disc=$_POST['Discription'];
         echo $tag=$_POST['Tag'];
 		
-				$file_dir = "D:\wamp64\www\kidzee\card";
+				$file_dir = "../kidzee/card";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			 "path: ".$file_array['tmp_name']."<br/>\n";

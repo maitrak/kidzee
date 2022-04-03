@@ -148,7 +148,7 @@ File10
     {
     
 	echo "file1";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -185,7 +185,7 @@ File10
     {
     
 	echo "file2";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -221,7 +221,7 @@ File10
     {
     
 	echo "file3";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -257,7 +257,7 @@ File10
     {
     echo "file4";
 	
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -294,7 +294,7 @@ File10
     {
     
 	echo "file5";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -331,7 +331,7 @@ File10
     {
     
 	echo "file6";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -368,7 +368,7 @@ File10
     {
     
 	echo "file7";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -405,7 +405,7 @@ File10
     {
     
 	echo "file8";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -441,7 +441,7 @@ File10
     {
     
 	echo "file9";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -478,7 +478,7 @@ File10
     {
     
 			echo "file10";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";

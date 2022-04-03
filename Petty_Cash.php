@@ -156,7 +156,7 @@ function myFunction2() {
 		
 		$whom=$_POST['whom'];
 		
-		$file_dir = "D:\wamp64\www\kidzee\Petty_cash";
+		$file_dir = "../kidzee/Petty_cash";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";

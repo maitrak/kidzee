@@ -20,7 +20,7 @@
 	if(isset($_POST['upload']))
     {
 		echo "file5";
-			$file_dir = "D:\wamp64\www\kidzee\doc";
+			$file_dir = "../kidzee/doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
