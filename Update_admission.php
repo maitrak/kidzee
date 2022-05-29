@@ -39,7 +39,7 @@ body {margin:0;}
 <div align=center>
 <?php
 session_start();
-    $connection=mysqli_connect("localhost","root","","kidzee");
+    $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
     if(!$connection)
     {
         echo "connection Failed because of ".mysqli_connect_error();

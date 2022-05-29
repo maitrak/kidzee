@@ -453,7 +453,7 @@ include('nav.php');
   </form>
   
   <?php
-  $connection=mysqli_connect("localhost","root","","kidzee");
+  $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
  
   if(isset($_POST['submit']))
   {
