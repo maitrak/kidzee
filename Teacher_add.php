@@ -1,10 +1,6 @@
 <?php 
 
-$connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
-    if(!$connection)
-    {
-        echo "connection Failed because of ".mysqli_connect_error();
-    }
+include("connection.php");
   session_start();
 include('sidebar.php'); 
 if(!isset($_SESSION['Username']))
@@ -138,7 +134,7 @@ Remarks<input type="text" name="Remarks"  ><br>
 
 <?php
 
-	 $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
+include("connection.php");
     if(!$connection)
     {
         echo "connection Failed because of ".mysqli_connect_error();
@@ -178,7 +174,7 @@ Remarks<input type="text" name="Remarks"  ><br>
     $Salary=$_POST['Salary'];
     $Remarks=$_POST['Remarks'];
 	
-			$file_dir = "../kidzee/Teacher";
+			$file_dir = "Teacher";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -201,17 +197,22 @@ Remarks<input type="text" name="Remarks"  ><br>
 	VALUES ('$Name','$fName','$mName','$sName','$Society','$Correspondence','$Mobile1','$Mobile2','$Mobile3','$Permanent','$PAN','$Cheque','$Bank','$Bank_no','$IFSC','$MICR','$Passport','$Proof','$Address_Proof','$Certi_10','$Certi_12','$Graduation','$Post','$Diploma','$Diploma_other','$Achivements','$Cheque_Submitted','$join','$Salary','$Remarks','$photo_name')";
     $fireQuery=mysqli_query($connection,$sqlQuery);
     
+    $active="ACTIVE";
+    $last_id = mysqli_insert_id($connection);
+
     if($fireQuery)
     {
-        
+      $sqlQuery1= "INSERT INTO `teacher_status`(`teacher_id`, `status`) VALUES (c,'$active')";
+      $fireQuery1=mysqli_query($connection,$sqlQuery1);
+      
         //$_SESSION['UseraAme']=$row['UseraAme'];
         //$_SESSION['Password']=$row['Password'];
-        echo "<script>window.alert('Loged in Succesfully..');</script>";
-        //echo "<script>window.location.href='../adminpage.php'</script>";
+        echo "<script>window.alert('Teacher Added Succcessfully');</script>";
+        
     }
     else
     {
-        echo "<script>window.alert('Login Failed');</script>";
+        echo "<script>window.alert('Teacher Added Failed');</script>";
        
     }
 	}

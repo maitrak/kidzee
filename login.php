@@ -3,7 +3,7 @@
 
 <?php
     session_start();
-   echo $_SESSION["favcolor"];
+   include("connection.php");
 
 ?>
 
@@ -192,11 +192,12 @@ window.onclick = function(event) {
 
 <?php
 
-	 $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
-    if(!$connection)
-    {
-        echo "connection Failed because of ".mysqli_connect_error();
-    }
+	//  $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
+  //   if(!$connection)
+  //   {
+  //       echo "connection Failed because of ".mysqli_connect_error();
+  //   }
+  
     
 	
 		if(isset($_POST['submit']))
@@ -209,13 +210,14 @@ window.onclick = function(event) {
     if(mysqli_num_rows($fireQuery)!=0)
     {
         $row=mysqli_fetch_assoc($fireQuery);
-        $_SESSION['Username']=$row['username'];
-        $_SESSION['Password']=$row['password'];
-            $_SESSION['reload']=0;
-        echo $_SESSION['Password'];
+        $username=$row['username'];
+        $password=$row['password'];
+
+        $_SESSION['Username']=$username;
+        $_SESSION['Password']=$password;
         
-        //echo "<script>window.alert('Loged in Succesfully..');</script>";
-        //echo "<script>window.location.href='login_page.php'</script>";
+        echo "<script>window.alert('Loged in Succesfully..');</script>";
+        echo "<script>window.location.href='login_page.php'</script>";
     }
     else
     {

@@ -8,7 +8,7 @@ session_start();
 $studid=$_GET['id'];
 echo $_GET['id'];
 include('nav.php');
-$connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
+include("connection.php");
 $id="";
 			$name="";
 			$program="";

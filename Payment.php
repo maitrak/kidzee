@@ -64,11 +64,7 @@ include('nav.php');
   
   <?php
   
-	  $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
-    if(!$connection)
-    {
-        echo "connection Failed because of ".mysqli_connect_error();
-    }
+  include("connection.php");
 	if(isset($_POST['submit']))
     {
 		$Name=$_POST['Name'];
@@ -110,7 +106,7 @@ include('nav.php');
 		
 		$sql="INSERT INTO `payment`( `Name`, `Particulars`, `Bill`, `Intent`, `Receipt`, `Voucher`, `Payment`, `Transaction`, `Amount`, `Bank`, `Bank_d`, `Cash`, `Discription`, `Aproval`, `Aproval_Date`, `Remarks`, `photo`) 
 		                     VALUES ('$Name','$Particulars','$Bill','$Intent','$Receipt','$Voucher','$Payment','$Transaction','$Amount','$Bank','$Bank_d','$Cash','$Discription','$Aproval','$Aproval_Date','$Remarks','$photo_name')";
-	
+        
 		$fireQuery=mysqli_query($connection,$sql);
         if($fireQuery)
         {

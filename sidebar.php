@@ -1,3 +1,28 @@
+
+<?php
+include('connection.php');
+
+if(!isset($_SESSION['Username']))
+{
+    echo "<script>window.alert('you have to Login First');</script>";
+   echo "<script>window.location.href='index.php'</script>";
+	
+}
+else
+{
+    $username=$_SESSION['Username'];
+    $password=$_SESSION['Password'];
+    $sqlQuery="SELECT  `username`, `password` FROM `login` WHERE `username`='$username' AND `password`='$password'  ";
+    $fireQuery=mysqli_query($connection,$sqlQuery);
+    if(mysqli_num_rows($fireQuery)==0)
+    {          
+            echo "<script>window.alert('you have to Login First');</script>";
+         echo "<script>window.location.href='index.php'</script>";
+    }
+}
+
+
+?>
 <!DOCTYPE html>
 <html>
 

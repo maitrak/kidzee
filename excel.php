@@ -1,9 +1,5 @@
 <?php  
-$connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
-    if(!$connection)
-    {
-        echo "connection Failed because of ".mysqli_connect_error();
-    }
+	include("connection.php");
  $query ="SELECT `Stud_Id`,`sname`, `Enquiry_no`,`sr_no`,`class`, `date`, `admission`, `dob`, `gender`, `preschool`, `father`, `mother`, `addr`, `contact`, `email`, `Efather`, `Emother`, `Ofather`, `Omother`, `KIDZEE`,`converted` FROM `enq`";  
  $result = mysqli_query($connection, $query);  
  ?>  

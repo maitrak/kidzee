@@ -2,11 +2,7 @@
 <body>
 <?php
 include('nav.php');
-$connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
-    if(!$connection)
-    {
-        echo "connection Failed because of ".mysqli_connect_error();
-    }
+include("connection.php");
 $sql="SELECT `admission_id`, `name`, `nrr`, `Session`, `acc_year`, `kidzee_enrol`, `kewi`,
 `class`, `form_fee`, `mode`, `form_no`, `br_no`, `i_no`, `kit_order`, `kit_given`, `admis_date`,
 `care`, `comitted`, `comitted_fee`, `es`, `disc`, `tran1`, `amt1`, `mode1`, `rec1`, `no1`,

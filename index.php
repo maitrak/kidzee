@@ -1,8 +1,29 @@
 <?php
     session_start();
+    include("connection.php");
     $_SESSION['reload']=0;
 
+
+if(!isset($_SESSION['name']))
+{
+    echo "<script>window.alert('you have to Login First');</script>";
+   echo "<script>window.location.href='user_login.php'</script>";
+	
+}
+else
+{
+    $name=$_SESSION['name'];
+    $password=$_SESSION['Password'];
+    $sqlQuery="SELECT  `Name` FROM `teacher` WHERE `Name`='$name'";
+    $fireQuery=mysqli_query($connection,$sqlQuery);
+    if(mysqli_num_rows($fireQuery)==0)
+    {          
+            echo "<script>window.alert('you have to Login First');</script>";
+        // echo "<script>window.location.href='user_login.php'</script>";
+    }
+}
 ?>
+
   <!-- JAY MATAJI -->
   <!-- JAI MATA DI -->
   <!-- SHREE GANESHAIH NAMAH -->

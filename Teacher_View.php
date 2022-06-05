@@ -1,10 +1,6 @@
 <?php  
-$connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
-    if(!$connection)
-    {
-        echo "connection Failed because of ".mysqli_connect_error();
-    }
- $query ="SELECT * FROM `teacher`";  
+  include("connection.php");
+ $query ="SELECT teacher.*,teacher_status.status FROM `teacher` INNER join teacher_status on teacher.ID=teacher_status.teacher_id;";  
  $result = mysqli_query($connection, $query);  
    session_start();
 include('sidebar.php'); 
@@ -23,7 +19,13 @@ if(!isset($_SESSION['Username']))
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-      </head>  
+        
+        <style>
+.button{
+               border-radius: 50%;
+          }
+        </style>   
+          </head>  
       <body>  
 	  <div style="margin-left: 16%;">
            <br /><br />  
@@ -32,6 +34,7 @@ if(!isset($_SESSION['Username']))
                      <table class="table table-bordered">  
                           <tr>  
                                <th >ID</th>  
+                               <th >Status</th> 
                                <th >Name of The Teacher</th>  
                                <th >Father's Name</th>  
                                <th >Mother's Name</th>  
@@ -76,6 +79,18 @@ if(!isset($_SESSION['Username']))
                      ?>  
                           <tr>  
                                <td><?php echo $row[0]; ?></td>  
+
+
+                               <td>                               <?php if($row['status']=='ACTIVE')
+                               {
+                                   echo '<button type="button" onclick="showHint(this)" id='.$row[0].'  name=0 class="btn btn-danger btn-circle btn-xs">Inactive</button>';
+
+                               }
+                               else
+                               {
+                                   echo '<button type="button" onclick="showHint(this)" id='.$row[0].'  name=1 class="btn btn-success btn-circle btn-xs">Active</button>';
+
+                               }?></td>
                                <td ><?php echo $row[1]; ?></td>  
                                <td><?php echo $row[2]; ?></td>  
                                <td><?php echo $row[3]; ?></td>  
@@ -107,7 +122,7 @@ if(!isset($_SESSION['Username']))
                                <td><?php echo $row[29]; ?></td>  
                                <td><?php echo $row[30]; ?></td>  
                                <td>
-								<a href="http://localhost/kidzee/Teacher/<?php echo $row[31]; ?>" class="w3-bar-item w3-button w3-bar-block">PDF</a>
+								<a href="Teacher/<?php echo $row[31]; ?>" class="w3-bar-item w3-button w3-bar-block">PDF</a>
                                 </td>
  
 								
@@ -124,4 +139,40 @@ if(!isset($_SESSION['Username']))
            </div>  
            </div>  
       </body>  
+      <script>
+function showHint(el) {
+     console.log(el.id,el.name);
+     let str="";
+     if (el.name==0)
+     {
+          str="INACTIVE"
+     }
+     else{
+          str="ACTIVE"
+     }
+    const xmlhttp = new XMLHttpRequest();
+    xmlhttp.onload = function(str) {
+     if (this.readyState == 4 && this.status == 200) {
+          if (el.name==0)
+     {
+          el.classList.remove("btn-danger");
+          el.innerHTML = "Active";
+          el.classList.add("btn-success");
+          el.name=1
+     }
+     else{
+          el.classList.remove("btn-success");
+          el.innerHTML = "Inctive";
+          el.classList.add("btn-danger");
+          el.name=0
+     }
+
+
+       }
+    }
+  xmlhttp.open("GET", "teacher_status.php?id=15&status="+str);
+  xmlhttp.send();
+  
+}
+      </script>
  </html>  

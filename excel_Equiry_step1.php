@@ -1,9 +1,5 @@
 <?php  
-$connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
-    if(!$connection)
-    {
-        echo "connection Failed because of ".mysqli_connect_error();
-    }
+	include("connection.php");
 	$follow_up="Follow up";
  $query ="SELECT * FROM `enquiry_step1` ORDER BY `enquiry_step1`.`NO` DESC";  
  $result = mysqli_query($connection, $query);  

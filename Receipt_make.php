@@ -1,14 +1,14 @@
+<?php
+    session_start();
+
+
+
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
-<?php $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
-
-    if(!$connection)
-
-    {
-
-        echo "connection Failed because of ".mysqli_connect_error();
-
-    }
+<?php  
+ include("connection.php");
 
 	
 
@@ -165,6 +165,8 @@ else{
 
         {
 
+          
+
            $max="SELECT max(Id) FROM invoice";
 
 		   if($result = mysqli_query($connection, $max)){
@@ -178,6 +180,10 @@ else{
 					{
 
 						 $highest_id = $row[0];
+            $name=$_SESSION['name'];
+            $str=$highest_id.'##'.$Name.'##'.$fName.'##'.$Class.'##'.$fee.'##'.$words.'##'.$Mode.'##'.$bank.'##'.$Number.'##'.$Transaction.'##'.$logo;
+             $sqlQueryLog= "INSERT INTO `log`( `name`, `log`) VALUES ('$name','$str')";
+      $fireQuery1=mysqli_query($connection,$sqlQueryLog);
 
 					}
 

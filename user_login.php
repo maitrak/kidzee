@@ -1,7 +1,15 @@
-<!DOCTYPE html>
+
+
+
+<?php
+    session_start();
+    include("connection.php");
+
+?>
+
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link rel="stylesheet" href="w3.css">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -142,19 +150,15 @@ img {
 	<tr>
 	<td>
 	<div class="imgcontainer" >
-      <img src="img_avatar2.png" width="50px" height="300px" alt="Admin" class="avatar"style="margin-right:15px;">
+      <img src="KEWI_LOGO.jpg" width="50px" height="250px" width="250px" alt="Admin" class="avatar"style="margin-right:15px;">
     </div>
 	</td>
 	<td>
 	
     <div class="container" style="margin-left:50%">
 		
-      <label for="uname"><b>Make User</b></label><br>
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="uname"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" required>
         
       <input type="submit" name="submit" value="submit">
       
@@ -185,24 +189,29 @@ window.onclick = function(event) {
 
 <?php
 
-include("connection.php");
+	//  $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
+  //   if(!$connection)
+  //   {
+  //       echo "connection Failed because of ".mysqli_connect_error();
+  //   }
+  
+    
 	
-			if(isset($_POST['submit']))
+		if(isset($_POST['submit']))
     {
+    $name=$_POST['name'];
+  
+    $sqlQuery="SELECT  `Name` FROM `teacher` WHERE `Name`='$name'";
     
-    $emailId=$_POST['uname'];
-    $password=$_POST['psw'];
-	$password = md5($password);  
-    $sqlQuery="INSERT INTO `login`( `username`, `password`) VALUES ('$emailId','$password')";
     $fireQuery=mysqli_query($connection,$sqlQuery);
-    
-    if($fireQuery)
+    if(mysqli_num_rows($fireQuery)!=0)
     {
+        $row=mysqli_fetch_assoc($fireQuery);
+        $username=$row['Name'];
         
-        //$_SESSION['UseraAme']=$row['UseraAme'];
-        //$_SESSION['Password']=$row['Password'];
+        $_SESSION['name']=$username;
         echo "<script>window.alert('Loged in Succesfully..');</script>";
-        //echo "<script>window.location.href='../adminpage.php'</script>";
+        echo "<script>window.location.href='index.php'</script>";
     }
     else
     {
