@@ -149,14 +149,14 @@ function myFunction2() {
 		$spend_amt=$_POST['spend_amt'];
 		if(is_null($spend_amt))
 		{
-			 echo "<script>window.alert('if');</script>";
+			
 			$spend_amt=$cash_rec+$remaining-$spend;
 		}
 		
 		
 		$whom=$_POST['whom'];
 		
-		$file_dir = "../kidzee/Petty_cash";
+		$file_dir = "Petty_cash";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
@@ -184,7 +184,7 @@ function myFunction2() {
         if($fireQuery)
         {
             echo "<script>window.alert('Record Added');</script>";
-			echo "<script>window.location.href='http://localhost/kidzee/index.php#Payment'</script>";
+			echo "<script>window.location.href='index.php#Payment'</script>";
 			
         }
         else
@@ -203,10 +203,7 @@ function myFunction2() {
 	
 
 	}	
-	else
-	{
-		echo "fail";
-	}
+	
   
 ?> 
   

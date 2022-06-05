@@ -4,7 +4,7 @@ $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$"
     {
         echo "connection Failed because of ".mysqli_connect_error();
     }
- $query ="SELECT * FROM `petty_cash`";  
+ $query ="SELECT * FROM `petty_cash` Order By Id DESC";  
  $result = mysqli_query($connection, $query);  
  ?>  
  <?php

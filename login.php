@@ -1,9 +1,15 @@
-<!DOCTYPE html>
+
+
+
 <?php
-session_start();?>
+    session_start();
+   echo $_SESSION["favcolor"];
+
+?>
+
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link rel="stylesheet" href="w3.css">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -205,8 +211,11 @@ window.onclick = function(event) {
         $row=mysqli_fetch_assoc($fireQuery);
         $_SESSION['Username']=$row['username'];
         $_SESSION['Password']=$row['password'];
-        echo "<script>window.alert('Loged in Succesfully..');</script>";
-        echo "<script>window.location.href='login_page.php'</script>";
+            $_SESSION['reload']=0;
+        echo $_SESSION['Password'];
+        
+        //echo "<script>window.alert('Loged in Succesfully..');</script>";
+        //echo "<script>window.location.href='login_page.php'</script>";
     }
     else
     {

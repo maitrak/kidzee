@@ -76,7 +76,7 @@ include('nav.php');
                                <td><?php echo $row[15]; ?></td>  
                                <td><?php echo $row[16]; ?></td>  
                                  
-                               <td><?php echo "<img src='http://localhost/kidzee/Petty_cash/".$row[17]."' width=250px  height=250px style=float:center>"; ?></td>  
+                               <td><?php echo "<img src='Payment/".$row[17]."' width=250px  height=250px style=float:center>"; ?></td>  
 								
                                  
                                  

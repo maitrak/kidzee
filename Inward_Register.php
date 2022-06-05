@@ -67,7 +67,7 @@ include('nav.php');
         if($fireQuery)
         {
             echo "<script>window.alert('Record Added');</script>";
-			
+			echo "<script>window.location.href='index.php'</script>";
         }
         else
         {

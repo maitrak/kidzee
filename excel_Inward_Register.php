@@ -25,7 +25,7 @@ include('nav.php');
                 <h3 align="center">Inward Register Excel</h3>                 
                 <br />  
                 <form method="post" action="export_Inward_Register.php" align="center">  
-                     <input type="submit" name="export" value="CSV Export" class="btn btn-success" />  
+                     <input type="submit" name="export" value="CSV Export " class="btn btn-success" />  
                 </form>  
                 <br />  
                 <div class="table-responsive" id="employee_table">  
@@ -48,6 +48,7 @@ include('nav.php');
 
  
                           </tr>  
+
                      <?php  
                      while($row = mysqli_fetch_array($result))  
                      {  

@@ -1,13 +1,14 @@
-﻿  <!-- JAY MATAJI -->
+<?php
+    session_start();
+    $_SESSION['reload']=0;
+
+?>
+  <!-- JAY MATAJI -->
   <!-- JAI MATA DI -->
   <!-- SHREE GANESHAIH NAMAH -->
 <!DOCTYPE html>
 <html lang="en">
-<?php
-    session_start();
-    unset($_SESSION['reload']);
 
-?>
 
 <head>
 
@@ -862,7 +863,7 @@
        
         <div class="panel-footer">
           
-          <a href="Login.php"><button class="btn btn-lg">Login</button></a>
+          <a href="login.php"><button class="btn btn-lg">Login</button></a>
         </div>
       </div>      
     </div>    

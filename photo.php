@@ -5,7 +5,8 @@
 session_start();
 ?>
 <?php
-$studid=$_SESSION['id'];
+$studid=$_GET['id'];
+echo $_GET['id'];
 include('nav.php');
 $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$","kidsedu_kidzee");
 $id="";
@@ -100,7 +101,9 @@ $id="";
   </tr>
     <tr>
   <td>
+    
   <form  method="post" action="child_photo.php" enctype="multipart/form-data">
+	  <input type="hidden" name="id" value="<?php echo $studid;?>">
   <input type="file"  name="fileupload" style="height:60px;"/><br>
   <input type="submit" name="submit" value="submit">
  

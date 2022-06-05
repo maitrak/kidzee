@@ -88,12 +88,12 @@ include('nav.php');
 		$Aproval_Date=$_POST['Aproval_Date'];
 		$Remarks=$_POST['Remarks'];
 		
-		$file_dir = "../kidzee/Payment";
+		$file_dir = "Payment";
 			
 			foreach($_FILES as $file_name => $file_array) {
-			echo "path: ".$file_array['tmp_name']."<br/>\n";
-			echo $photo=$file_array['tmp_name']."<br/>\n";
-			echo $photo_name=$file_array['name'];
+			 "path: ".$file_array['tmp_name']."<br/>\n";
+			 $photo=$file_array['tmp_name']."<br/>\n";
+			 $photo_name=$file_array['name'];
  
 
 
@@ -101,9 +101,9 @@ include('nav.php');
 			move_uploaded_file($file_array['tmp_name'],
 			"$file_dir/".$file_array['name'])
 			or die ("Couldn't move file");
-			echo "File was moved!";
+			 "File was moved!";
 			} else {
-			echo "No file found.";
+			 "No file found.";
 			}
 			}
 
@@ -133,10 +133,7 @@ include('nav.php');
 	
 
 	}	
-	else
-	{
-		echo "fail";
-	}
+
   
 ?> 
   

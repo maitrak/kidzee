@@ -42,7 +42,7 @@
 		
 		$es=$_POST['es'];
 		$disc=$_POST['disc'];
-		echo $comit = $comitted_fee-$disc;
+		$comit = $comitted_fee-$disc;
 		$tran1=$_POST['tran1'];
 		$amt1=$_POST['amt1'];
 		$mode1=$_POST['mode1'];
@@ -116,7 +116,7 @@
 		$no12=$_POST['no12'];
 		$br_no12=$_POST['br_no12'];
 		$refund_dt=$_POST['refund_dt'];
-		echo $chq_onl=$_POST['chq_onl'];
+		$chq_onl=$_POST['chq_onl'];
 		$refund_tran_no=$_POST['refund_tran_no'];
 		$refund_amt=$_POST['refund_amt'];
 		$chq_no=$_POST['chq_no'];

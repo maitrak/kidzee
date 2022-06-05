@@ -62,7 +62,7 @@
 		 $alert="ID:".$highest_id."   Name:".$name."      Session:".$Session."   A/C Year:".$acc_year."   Class:".$class;
             //echo "<script>window.alert('Record Added');</script>";
 			echo "<script>window.alert('$alert');</script>";
-			echo "<script>window.location.href='http://localhost/kidzee/index.php#step4'</script>";
+            echo "<script>window.location.href='index.php#step4'</script>";
         }
         else
         {

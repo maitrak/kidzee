@@ -41,7 +41,7 @@ include('nav.php');
         $_SESSION['id']=$studid;
 		echo $_SESSION['username'];
         echo "<script>window.alert('Record Found');</script>";
-		echo "<script>window.location.href='photo.php'</script>";
+		echo "<script>window.location.href='photo.php?id=".$studid."'</script>";
     }
 		else
 		{
