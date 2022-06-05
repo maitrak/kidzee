@@ -201,15 +201,18 @@ window.onclick = function(event) {
     {
     $name=$_POST['name'];
   
-    $sqlQuery="SELECT  `Name` FROM `teacher` WHERE `Name`='$name'";
+    $sqlQuery="SELECT teacher.id,teacher.Name FROM `teacher` INNER join teacher_status on teacher.ID=teacher_status.teacher_id where teacher.Name='$name' and teacher_status.status='active';";
     
     $fireQuery=mysqli_query($connection,$sqlQuery);
     if(mysqli_num_rows($fireQuery)!=0)
     {
         $row=mysqli_fetch_assoc($fireQuery);
         $username=$row['Name'];
+        echo $id=$row['id'];
         
         $_SESSION['name']=$username;
+        $_SESSION['teacher_id']=$id;
+
         echo "<script>window.alert('Loged in Succesfully..');</script>";
         echo "<script>window.location.href='index.php'</script>";
     }

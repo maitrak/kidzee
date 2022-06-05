@@ -13,7 +13,6 @@ if(!isset($_SESSION['name']))
 else
 {
     $name=$_SESSION['name'];
-    $password=$_SESSION['Password'];
     $sqlQuery="SELECT  `Name` FROM `teacher` WHERE `Name`='$name'";
     $fireQuery=mysqli_query($connection,$sqlQuery);
     if(mysqli_num_rows($fireQuery)==0)

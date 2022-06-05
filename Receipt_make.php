@@ -1,6 +1,11 @@
 <?php
     session_start();
-
+    $_SESSION['reload']=$_SESSION['reload']+1;
+    if($_SESSION['reload']>1)
+        { 
+       echo $_SESSION['reload'];
+       echo "<script>window.location.href='index.php'</script>";
+       }
 
 
 
@@ -181,7 +186,9 @@ else{
 
 						 $highest_id = $row[0];
             $name=$_SESSION['name'];
-            $str=$highest_id.'##'.$Name.'##'.$fName.'##'.$Class.'##'.$fee.'##'.$words.'##'.$Mode.'##'.$bank.'##'.$Number.'##'.$Transaction.'##'.$logo;
+            $teacher_id=$_SESSION['teacher_id'];
+
+            $str=$teacher_id.'##'.$highest_id.'##'.$Name.'##'.$fName.'##'.$Class.'##'.$fee.'##'.$words.'##'.$Mode.'##'.$bank.'##'.$Number.'##'.$Transaction.'##'.$logo;
              $sqlQueryLog= "INSERT INTO `log`( `name`, `log`) VALUES ('$name','$str')";
       $fireQuery1=mysqli_query($connection,$sqlQueryLog);
 
