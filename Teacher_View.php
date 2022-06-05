@@ -81,7 +81,7 @@ if(!isset($_SESSION['Username']))
                                <td><?php echo $row[0]; ?></td>  
 
 
-                               <td>                               <?php if($row['status']=='ACTIVE')
+                               <td>                               <?php if($row['status']!='ACTIVE')
                                {
                                    echo '<button type="button" onclick="showHint(this)" id='.$row[0].'  name=0 class="btn btn-danger btn-circle btn-xs">Inactive</button>';
 

@@ -3880,6 +3880,7 @@ span.psw {
 
 
   
+  <a href="log.php" class="w3-bar-item w3-button w3-bar-block">LOG</a>
   <a href="logout.php" class="w3-bar-item w3-button w3-bar-block">LOG OUT</a>
 </div>
 
