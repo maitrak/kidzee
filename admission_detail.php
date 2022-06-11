@@ -1,11 +1,11 @@
-<html>
-<body>
-<div align=center>
 <?php
 include('nav.php');
   
 
 ?>
+<html>
+<body>
+<div align=center>
 <h1> Fill New Admission Details</h1>
 <form  method="post" action="add_insert.php">
   <h3>Details</h3>

@@ -1,7 +1,6 @@
 <?php 
-
+session_start();
 include("connection.php");
-  session_start();
 include('sidebar.php'); 
 if(!isset($_SESSION['Username']))
 {
@@ -202,7 +201,7 @@ include("connection.php");
 
     if($fireQuery)
     {
-      $sqlQuery1= "INSERT INTO `teacher_status`(`teacher_id`, `status`) VALUES (c,'$active')";
+      $sqlQuery1= "INSERT INTO `teacher_status`(`teacher_id`, `status`) VALUES ($last_id,'$active')";
       $fireQuery1=mysqli_query($connection,$sqlQuery1);
       
         //$_SESSION['UseraAme']=$row['UseraAme'];

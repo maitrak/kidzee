@@ -1,10 +1,10 @@
 <?php  
+include('nav.php');
   include("connection.php");
 	$ptp="Sr. Kg";
 
  
 
-include('nav.php');
 
  ?>  
 

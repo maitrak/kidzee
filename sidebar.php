@@ -1,5 +1,5 @@
-
 <?php
+session_start();
 include('connection.php');
 
 if(!isset($_SESSION['Username']))
@@ -3846,7 +3846,7 @@ span.psw {
     <div class="w3-dropdown-content w3-bar-block">
       <a href="excel_Petty_cash.php" class="w3-bar-item w3-button w3-grey">Petty Cash Excel </a>
       <a href="excel_Payment.php" class="w3-bar-item w3-button w3-grey">Payment Excel </a>
-      <a href="excel_r.php" class="w3-bar-item w3-button w3-grey">Invoice Excel </a>
+      <a href="excel_R.php" class="w3-bar-item w3-button w3-grey">Invoice Excel </a>
       
       
 	  

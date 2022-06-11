@@ -1,8 +1,8 @@
 <?php  
-  include("connection.php");
- $query ="SELECT teacher.*,teacher_status.status FROM `teacher` INNER join teacher_status on teacher.ID=teacher_status.teacher_id;";  
- $result = mysqli_query($connection, $query);  
-   session_start();
+session_start();
+include("connection.php");
+$query ="SELECT teacher.*,teacher_status.status FROM `teacher` INNER join teacher_status on teacher.ID=teacher_status.teacher_id;";  
+$result = mysqli_query($connection, $query);  
 include('sidebar.php'); 
 if(!isset($_SESSION['Username']))
 {
@@ -83,12 +83,12 @@ if(!isset($_SESSION['Username']))
 
                                <td>                               <?php if($row['status']!='ACTIVE')
                                {
-                                   echo '<button type="button" onclick="showHint(this)" id='.$row[0].'  name=0 class="btn btn-danger btn-circle btn-xs">Inactive</button>';
+                                   echo '<button type="button" onclick="showHint(this)" id='.$row[0].'  name=1 class="btn btn-danger btn-circle btn-xs">Inactive</button>';
 
                                }
                                else
                                {
-                                   echo '<button type="button" onclick="showHint(this)" id='.$row[0].'  name=1 class="btn btn-success btn-circle btn-xs">Active</button>';
+                                   echo '<button type="button" onclick="showHint(this)" id='.$row[0].'  name=0 class="btn btn-success btn-circle btn-xs">Active</button>';
 
                                }?></td>
                                <td ><?php echo $row[1]; ?></td>  
@@ -153,18 +153,18 @@ function showHint(el) {
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onload = function(str) {
      if (this.readyState == 4 && this.status == 200) {
-          if (el.name==0)
+          if (el.name==1)
      {
           el.classList.remove("btn-danger");
           el.innerHTML = "Active";
           el.classList.add("btn-success");
-          el.name=1
+          el.name=0
      }
      else{
           el.classList.remove("btn-success");
-          el.innerHTML = "Inctive";
+          el.innerHTML = "Inactive";
           el.classList.add("btn-danger");
-          el.name=0
+          el.name=1
      }
 
 

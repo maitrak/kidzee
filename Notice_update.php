@@ -1,8 +1,6 @@
-<html>
-<body>
 <?php  
- include("connection.php");
-  session_start();
+session_start();
+include("connection.php");
 include('sidebar.php'); 
 if(!isset($_SESSION['Username']))
 {
@@ -10,6 +8,8 @@ if(!isset($_SESSION['Username']))
     echo "<script>window.location.href='index.php'</script>";
 	
 }?>
+<html>
+<body>
    <div style="margin-left:16%">
 
 <h2> Update Notice</h2>

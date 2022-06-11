@@ -1,9 +1,9 @@
-<html>
-<body>
-<div align=center>
 <?php
 include('nav.php');
 ?>
+<html>
+<body>
+<div align=center>
 <br>
 <h2>Inward Register</h2>
 <br>

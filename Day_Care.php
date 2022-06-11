@@ -1,10 +1,10 @@
 <?php  
+include('nav.php');
 	include("connection.php");
 	$ptp="Day Care";
 
  
 
-include('nav.php');
 
  ?>  
 

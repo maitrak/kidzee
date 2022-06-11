@@ -1,3 +1,6 @@
+<?php
+include('nav.php');
+?>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,9 +43,6 @@ body {margin:0;}
 <?php
 session_start();
 include("connection.php");
-?>
-<?php
-include('nav.php');
 ?>
 <h2> Update Admission/Fees Details </h2>
 <br>

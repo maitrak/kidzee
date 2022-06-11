@@ -1,8 +1,8 @@
 <?php  
-  include("connection.php");
+session_start();
+include("connection.php");
   
  
-  session_start();
 include('sidebar.php');
 if(!isset($_SESSION['Username']))
 {

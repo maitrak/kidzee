@@ -1,10 +1,6 @@
-
-
-
 <?php
-    session_start();
-    include("connection.php");
-
+session_start();
+include("connection.php");
 ?>
 
 <html>
@@ -208,8 +204,8 @@ window.onclick = function(event) {
     {
         $row=mysqli_fetch_assoc($fireQuery);
         $username=$row['Name'];
-        echo $id=$row['id'];
-        
+        $id=$row['id'];
+        echo $id;
         $_SESSION['name']=$username;
         $_SESSION['teacher_id']=$id;
 

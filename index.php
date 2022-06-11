@@ -1,12 +1,13 @@
 <?php
-    session_start();
-    include("connection.php");
-    $_SESSION['reload']=0;
+session_start();
+include("connection.php");
+$_SESSION['reload']=0;
 
 
 if(!isset($_SESSION['name']))
 {
-    echo "<script>window.alert('you have to Login First');</script>";
+
+    echo "<script>window.alert('You have to Login First');</script>";
    echo "<script>window.location.href='user_login.php'</script>";
 	
 }
@@ -18,7 +19,7 @@ else
     if(mysqli_num_rows($fireQuery)==0)
     {          
             echo "<script>window.alert('you have to Login First');</script>";
-        // echo "<script>window.location.href='user_login.php'</script>";
+         echo "<script>window.location.href='user_login.php'</script>";
     }
 }
 ?>
@@ -871,7 +872,7 @@ else
 
 <div id="Tools" class="container-fluid">
   <div class="text-center">
-    <h2>Management</h2>
+    <h2>Management </h2>
     
   </div>
   <div class="row slideanim">

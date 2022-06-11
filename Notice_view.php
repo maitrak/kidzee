@@ -1,11 +1,11 @@
+<?php
+include('nav.php');
+?>
 <?php  
   include("connection.php");
  $query ="SELECT * FROM `notice`";  
  $result = mysqli_query($connection, $query);  
  ?>  
- <?php
-include('nav.php');
-?>
  <!DOCTYPE html>  
  <html>  
       <head>  
@@ -20,7 +20,7 @@ include('nav.php');
                 <div class="table-responsive" id="employee_table">  
                      <table class="table table-bordered">  
                           <tr>  
-                               <th >Date</th>  
+                               <th >Header</th>  
                                <th >Body</th>  
                                
                                 

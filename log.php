@@ -1,8 +1,8 @@
 <?php  
+session_start();
   include("connection.php");
  $query ="SELECT * FROM `log`";  
  $result = mysqli_query($connection, $query);  
-   session_start();
 include('sidebar.php'); 
 if(!isset($_SESSION['Username']))
 {

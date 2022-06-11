@@ -1,7 +1,7 @@
 <?php  
+include('nav.php'); 
 	include("connection.php");
 	  session_start();
-include('nav.php'); 
 
  $query ="SELECT * FROM `add`";  
  $result = mysqli_query($connection, $query);  

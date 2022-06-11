@@ -1,12 +1,12 @@
+<?php
+include('nav.php');
+?>
 <html>
 <body>
 <div align=center
 <?php
 session_start();
 include("connection.php");
-?>
-<?php
-include('nav.php');
 ?>
 <h2> Search Your Student For<br> Updateing Photo/Upload Photo </h2>
 <br>
