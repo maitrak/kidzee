@@ -40,6 +40,12 @@ include('nav.php');
   <?php
   
   include("connection.php");
+
+
+
+
+
+  
 	if(isset($_POST['submit']))
     {
 		$doc=$_POST['doc'];

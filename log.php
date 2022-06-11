@@ -1,7 +1,7 @@
 <?php  
 session_start();
   include("connection.php");
- $query ="SELECT * FROM `log`";  
+ $query ="SELECT * FROM `log` ORDER BY create_at desc";  
  $result = mysqli_query($connection, $query);  
 include('sidebar.php'); 
 if(!isset($_SESSION['Username']))

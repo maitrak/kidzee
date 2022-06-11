@@ -55,7 +55,7 @@ if(!isset($_SESSION['Username']))
                                <th >Name</th>   
                                <th >Total Received</th>  
                                <th >Total Installment Marked</th>  
-                                 
+                                 <th>Pending</th>
                                <th >Discount</th>  
                                <th >Stake Rate Fee</th>  
                                

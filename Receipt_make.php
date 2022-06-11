@@ -1,7 +1,7 @@
 <?php
     session_start();
     $_SESSION['reload']=$_SESSION['reload']+1;
-    if($_SESSION['reload']>1)
+    if($_SESSION['reload']>2)
         { 
        echo $_SESSION['reload'];
        echo "<script>window.location.href='index.php'</script>";
@@ -188,7 +188,7 @@ else{
             $name=$_SESSION['name'];
             $teacher_id=$_SESSION['teacher_id'];
 
-            $str=$teacher_id.'##'.$highest_id.'##'.$Name.'##'.$fName.'##'.$Class.'##'.$fee.'##'.$words.'##'.$Mode.'##'.$bank.'##'.$Number.'##'.$Transaction.'##'.$logo;
+            $str='Teacher ID '.$teacher_id.'##'.'Invoice ID '.$highest_id.'##'.'Name '.$Name.'##'.'Father Name '.$fName.'##'.'Class '.$Class.'##'.'Fees '.$fee.'##'.'In words '.$words.'##'.'Mode '.$Mode.'##'.'bank '.$bank.'##'.'Number '.$Number.'##'.'Transaction Date '.$Transaction.'##'.'Logo '.$logo;
              $sqlQueryLog= "INSERT INTO `log`( `name`, `log`) VALUES ('$name','$str')";
       $fireQuery1=mysqli_query($connection,$sqlQueryLog);
 
