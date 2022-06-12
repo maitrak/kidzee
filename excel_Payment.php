@@ -1,6 +1,6 @@
 <?php  
-	include("connection.php");
-		  session_start();
+session_start();
+include("connection.php");
 include('sidebar.php'); 
 if(!isset($_SESSION['Username']))
 {   
@@ -81,7 +81,7 @@ echo "<script>window.alert('you have to Login First');</script>";    echo "<scri
 
                                <td><?php echo $row[16]; ?></td>  
                               
-							   <?php  echo "<td  align='center' ><img src='http://localhost/kidzee/Payment/".$cpn."' width=500px  height=500px ></td>";?>
+							   <?php  echo "<td  align='center' ><img src='Payment/".$cpn."' width=500px  height=500px ></td>";?>
 						
  
                                  

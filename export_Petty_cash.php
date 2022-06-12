@@ -8,7 +8,7 @@
       $output = fopen("php://output", "w");  
       fputcsv($output, array('ID','Cash Received Amount','Cash in hand','Date','Voucher No','Reasons to spend','Rupees spend','Total (remaining cash in hand)','by whom','Photo Name'  ));  
        $query ="SELECT * FROM `petty_cash`";  
-      $result = mysqli_query($connect, $query);  
+      $result = mysqli_query($connection, $query);  
       while($row = mysqli_fetch_assoc($result))  
       {  
            fputcsv($output, $row);  

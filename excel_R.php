@@ -1,6 +1,6 @@
 <?php  
-	include("connection.php");
-	  session_start();
+session_start();
+include("connection.php");
  $query ="SELECT * FROM `invoice` ORDER BY ID DESC";  
  $result = mysqli_query($connection, $query);  
  if(!isset($_SESSION['Username']))

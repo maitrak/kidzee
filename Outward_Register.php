@@ -1,9 +1,9 @@
-<html>
-<body>
-<div align=center>
 <?php
 include('nav.php');
 ?>
+<html>
+<body>
+<div align=center>
 <br>
 <h2>Outward Register</h2>
 <br>
@@ -40,6 +40,12 @@ include('nav.php');
   <?php
   
   include("connection.php");
+
+
+
+
+
+  
 	if(isset($_POST['submit']))
     {
 		$doc=$_POST['doc'];

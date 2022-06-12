@@ -1,7 +1,7 @@
 <?php
-    session_start();
-    include("connection.php");
-    $_SESSION['reload']=0;
+session_start();
+include("connection.php");
+$_SESSION['reload']=0;
 
 
 if(!isset($_SESSION['name']))

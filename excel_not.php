@@ -1,12 +1,12 @@
+<?php
+include('nav.php');
+?>
 <?php  
 	include("connection.php");
 	$follow_up="Not Interested";
  $query ="SELECT * FROM `enquiry_step1` WHERE `convert_enq` ='$follow_up' ORDER BY `enquiry_step1`.`NO` DESC";  
  $result = mysqli_query($connection, $query);  
  ?>  
- <?php
-include('nav.php');
-?>
  <!DOCTYPE html>  
  <html>  
       <head>  

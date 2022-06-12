@@ -1,11 +1,11 @@
-<html>
-<body>
 <?php
 include('nav.php');
 include("connection.php");
 	 $query ="SELECT * FROM `number`";  
 	$result = mysqli_query($connection, $query);  
 ?>
+<html>
+<body>
 <head>
 <style>
 .red-star {

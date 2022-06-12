@@ -1,10 +1,6 @@
-
-
-
 <?php
-    session_start();
-    include("connection.php");
-
+session_start();
+include("connection.php");
 ?>
 
 <html>
@@ -159,7 +155,7 @@ img {
 		
       <label for="uname"><b>Name</b></label>
       <input type="text" placeholder="Enter Name" name="name" required>
-        
+      <input type="text" placeholder="Enter Password" name="password" required>
       <input type="submit" name="submit" value="submit">
       
     </div>
@@ -200,16 +196,16 @@ window.onclick = function(event) {
 		if(isset($_POST['submit']))
     {
     $name=$_POST['name'];
-  
-    $sqlQuery="SELECT teacher.id,teacher.Name FROM `teacher` INNER join teacher_status on teacher.ID=teacher_status.teacher_id where teacher.Name='$name' and teacher_status.status='active';";
+    $password=$_POST['password'];
+    $sqlQuery="SELECT teacher.id,teacher.Name,teacher.Mobile3 FROM `teacher` INNER join teacher_status on teacher.ID=teacher_status.teacher_id where teacher.Name='$name' and teacher_status.status='active' and teacher.Name='$password  ';";
     
     $fireQuery=mysqli_query($connection,$sqlQuery);
     if(mysqli_num_rows($fireQuery)!=0)
     {
         $row=mysqli_fetch_assoc($fireQuery);
         $username=$row['Name'];
-        echo $id=$row['id'];
-        
+        $id=$row['id'];
+        echo $id;
         $_SESSION['name']=$username;
         $_SESSION['teacher_id']=$id;
 

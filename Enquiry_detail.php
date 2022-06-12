@@ -1,9 +1,9 @@
-<html>
-<body>
 <?php
 include('nav.php');
   
 ?>
+<html>
+<body>
 <head>
 <style>
 .red-star {

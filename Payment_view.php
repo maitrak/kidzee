@@ -1,11 +1,11 @@
+<?php
+include('nav.php');
+?>
 <?php  
   include("connection.php");
  $query ="SELECT * FROM `payment`";  
  $result = mysqli_query($connection, $query);  
  ?>  
- <?php
-include('nav.php');
-?>
  <!DOCTYPE html>  
  <html>  
       <head>  

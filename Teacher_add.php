@@ -1,7 +1,6 @@
 <?php 
-
+session_start();
 include("connection.php");
-  session_start();
 include('sidebar.php'); 
 if(!isset($_SESSION['Username']))
 {
@@ -49,7 +48,7 @@ Society Name<input type="text" name="Society"  ><br>
 Correspondence Address<input type="text" name="Correspondence"  ><br>
 Mobile Nuber 1<input type="text" name="Mobile1"  ><br>
 Mobile Nuber 2<input type="text" name="Mobile2"  ><br>
-Mobile Nuber 3<input type="text" name="Mobile3"  ><br>
+Passoword<input type="text" name="Mobile3"  ><br>
 Permanent Address<input type="text" name="Permanent"  ><br>
 PAN No<input type="text" name="PAN"  ><br>
 Name As on Cheque<input type="text" name="Cheque"  ><br>
@@ -202,7 +201,7 @@ include("connection.php");
 
     if($fireQuery)
     {
-      $sqlQuery1= "INSERT INTO `teacher_status`(`teacher_id`, `status`) VALUES (c,'$active')";
+      $sqlQuery1= "INSERT INTO `teacher_status`(`teacher_id`, `status`) VALUES ($last_id,'$active')";
       $fireQuery1=mysqli_query($connection,$sqlQuery1);
       
         //$_SESSION['UseraAme']=$row['UseraAme'];

@@ -1,6 +1,4 @@
-<html>
-<body>
-<div align=center>
+
 <?php
 include('nav.php');
 include("connection.php");
@@ -51,7 +49,9 @@ $max="SELECT max(`ID`) FROM `petty_cash`";
 		$in_hand_cash=$rec+$in_hand;
 		
 ?>
-
+<html>
+<body>
+<div align=center>
 <br>
 <h2>Petty Cash</h2>
 <br>

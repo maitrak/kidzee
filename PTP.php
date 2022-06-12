@@ -1,10 +1,10 @@
 <?php  
-  include("connection.php");
+include('nav.php');
+include("connection.php");
 	$ptp="PTP";
 
  
 
-include('nav.php');
 
  ?>  
 
