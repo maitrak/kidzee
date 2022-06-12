@@ -12,7 +12,7 @@ session_start();
 		if(isset($_POST['submit']))
 		{
 			
-			$file_dir = "../kidzee/image";
+			$file_dir = "image";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";

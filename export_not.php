@@ -10,7 +10,7 @@
       $follow_up="Not Interested";
 	  
 	$query ="SELECT * FROM `enquiry_step1` WHERE `convert_enq` ='$follow_up'";   
-      $result = mysqli_query($connect, $query);  
+      $result = mysqli_query($connection, $query);  
       while($row = mysqli_fetch_assoc($result))  
       {  
            fputcsv($output, $row);  
