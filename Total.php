@@ -138,6 +138,7 @@ if(!isset($_SESSION['Username']))
 								 
 								 ?>
 <td ><?php echo $count; ?></td> 
+<td><?php echo $row['comitted_fee']- $Total ?></td>
 <td ><?php echo $row['disc']; ?></td> 
 <td ><?php echo $row['comitted_fee']; ?></td> 
  
