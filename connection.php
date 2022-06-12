@@ -8,3 +8,5 @@ $connection=mysqli_connect("kidseduworldindia.com","kidsedu_kidsedu","Dec@2019$"
     }
 
 ?>
+<link rel="icon" type="image/x-icon" href="KEWI_LOGO.jpg">
+<title>KEWI</title>
