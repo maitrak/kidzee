@@ -39,7 +39,7 @@ else
   <title>KEWI</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+  <link rel="icon" type="image/x-icon" href="KEWI_LOGO.jpg">
   
   <script src="jquery.min.js"></script>
   <script src="bootstrap.min.js"></script>
