@@ -152,10 +152,11 @@ img {
 	<td>
 	
     <div class="container" style="margin-left:50%">
-		
+    <h2><b>Teacher Login</b></h2>
       <label for="uname"><b>Name</b></label>
       <input type="text" placeholder="Enter Name" name="name" required>
-      <input type="text" placeholder="Enter Password" name="password" required>
+      <label for="uname"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
       <input type="submit" name="submit" value="submit">
       
     </div>
