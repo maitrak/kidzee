@@ -78,7 +78,7 @@ if(!isset($_SESSION['Username']))
                      {  
                      ?>  
                           <tr>  
-                               <td><?php echo $row[0]; ?></td>  
+                               <td><a href="Teacher_update.php?id=<?php echo $row[0]; ?>"><?php echo $row[0]; ?></a></td>  
 
 
                                <td>                               <?php if($row['status']!='ACTIVE')

@@ -58,11 +58,11 @@ include('nav.php');
                                <td><?php echo $row[4]; ?></td>  
                                 
                                 <td><a href="image/<?php echo $row[115]; ?>" class="w3-bar-item w3-button w3-bar-block">Image</a></td>
-                                <td><a href="http://localhost/kidzee/image/<?php echo $row[116]; ?>" class="w3-bar-item w3-button w3-bar-block">Image</a></td>
-                                <td><a href="http://localhost/kidzee/image/<?php echo $row[117]; ?>" class="w3-bar-item w3-button w3-bar-block">Image</a></td>
+                                <td><a href="image/<?php echo $row[116]; ?>" class="w3-bar-item w3-button w3-bar-block">Image</a></td>
+                                <td><a href="image/<?php echo $row[117]; ?>" class="w3-bar-item w3-button w3-bar-block">Image</a></td>
                                 <td><a href="doc/<?php echo $row[118]; ?>" class="w3-bar-item w3-button w3-bar-block" >Document</a></td>
-                               <td><a href="http://localhost/kidzee/doc/<?php echo $row[119]; ?>" class="w3-bar-item w3-button w3-bar-block">Document</a></td>
-                               <td><a href="http://localhost/kidzee/doc/<?php echo $row[120]; ?>" class="w3-bar-item w3-button w3-bar-block">Document</a></td>
+                               <td><a href="doc/<?php echo $row[119]; ?>" class="w3-bar-item w3-button w3-bar-block">Document</a></td>
+                               <td><a href="doc/<?php echo $row[120]; ?>" class="w3-bar-item w3-button w3-bar-block">Document</a></td>
 								<td>
 								<a href="child_doc/<?php echo $row1[118]; ?>" class="w3-bar-item w3-button w3-bar-block"><?php echo $row1[118]; ?></a>
                                 </td>
