@@ -10,7 +10,7 @@ include("connection.php");
     
     
 	
-			$file_dir = "../kidzee/doc";
+			$file_dir = "doc";
 			
 			foreach($_FILES as $file_name => $file_array) {
 			echo "path: ".$file_array['tmp_name']."<br/>\n";
