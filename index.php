@@ -274,7 +274,7 @@ else
         <span class="icon-bar"></span>                        
       </button>
       <a class="navbar-brand" href="#myPage">KEWI</a>
-      <a class="navbar-brand" href="logout.php" style="float:right" >Logout</a>
+      <a class="navbar-brand" href="user_logout.php" style="float:right" >Logout</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
