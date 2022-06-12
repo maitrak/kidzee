@@ -43,7 +43,7 @@ if(!isset($_SESSION['Username']))
                                <th >Correspondence Address</th>  
                                <th >Mobile Nuber 1</th>  
                                <th >Mobile Nuber 2</th>  
-                               <th >Mobile Nuber 3</th>  
+                               <th >Passward</th>  
                                <th >Permanent Address</th>  
                                <th >PAN No</th>  
                                <th >Name As on Cheque</th>  
